@@ -1,0 +1,29 @@
+1. Dependências:
+pip install fastapi uvicorn sqlalchemy passlib[bcrypt] python-jose[cryptography] python-dotenv python-multipart
+
+2. Executar API => para rodar o código
+uvicorn main:app --reload
+
+3. Dependências extras:
+pip install sqlalchemy_utils
+
+4. Migração
+instalar alembic => pip install alembic
+passo 1 => alembic init alembic
+passo 2 => alterar url em alembic.ini
+passo 3 => import sys [alembic/env.py]
+passo 4 => import os [alembic/env.py]
+passo 5 => sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+passo 6 => from models import Base
+passo 7 => target_metadata = Base.metadata
+passo 8 => alembic revision --autogenerate -m "Initial Migration"
+passo 9 => alembic upgrade head [Error com sqlalchemy_utils ChoiceTypes]
+passo 10 => substituir ChoiceTyper por String
+passo 11 => deletar migration, deletar arquivo de pychace, deletar versão inicial do db
+passo 12 => executar outra vez passos 8 e 9
+
+5.  How FastAPI Handles Requests Behind the Scenes: https://youtu.be/tGD3653BrZ8
+
+6.  Entendendo async/await em Python com análise de performance: https://youtu.be/-eIWgi35Q8s
+
+7. requests => pip install requests

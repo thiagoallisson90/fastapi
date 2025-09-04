@@ -1,0 +1,6 @@
+venv
+__pycache__
+alembic
+banco.bd
+.env
+alembic.ini
