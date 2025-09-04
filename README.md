@@ -4,7 +4,7 @@
 
 ## 🚀 Project Setup
 
-This project uses **FastAPI** with authentication, database support, migrations, and external API requests.
+This project uses **FastAPI** with authentication, database support, migrations, and schemas.
 
 ---
 
