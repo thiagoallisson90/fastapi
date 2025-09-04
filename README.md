@@ -23,5 +23,5 @@ To start the FastAPI server using **Uvicorn**, run:
 ### Standard structure (`main.py`):
 
 ```bash
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
